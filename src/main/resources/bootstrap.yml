@@ -1,0 +1,9 @@
+my:
+  application:
+    logfileName: myapp1-bootstrap-default
+---
+spring:
+  profiles: test
+my:
+  application:
+    logfileName: myapp1-bootstrap-test
