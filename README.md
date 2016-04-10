@@ -8,22 +8,27 @@ that the logback config is initialized multiple times with potentially different
 
 Cases:
 
-# No bootstrap.yml
+## No bootstrap.yml
 
 Running the application yields 2 log files:
 
 - logfile_IS_UNDEFINED.log
 - myapp1-application-default.log
 
-# With bootstrap.yml provided (default profile)
+## With bootstrap.yml provided (default profile)
 
 Running the application yields 2 log files:
 
 - myapp1-bootstrap-default.log
 - myapp1-application-default.log
 
-# With bootstrap.yml provided (test profile)
+## With bootstrap.yml provided (test profile)
 
 - myapp1-bootstrap-test.log
 - myapp1-application-test.log
 
+# RESOLUTION
+
+When adding the cloud dependency, the custom properties for logback-spring need to be moved to the bootstrap.yml (and
+their associated profiles).  From that point, the logging is only initialized once with the correct property.  See 
+https://github.com/spring-cloud/spring-cloud-commons/issues/107 for more info.
