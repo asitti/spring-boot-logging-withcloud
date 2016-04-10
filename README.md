@@ -32,3 +32,4 @@ Running the application yields 2 log files:
 When adding the cloud dependency, the custom properties for logback-spring need to be moved to the bootstrap.yml (and
 their associated profiles).  From that point, the logging is only initialized once with the correct property.  See 
 https://github.com/spring-cloud/spring-cloud-commons/issues/107 for more info.
+
