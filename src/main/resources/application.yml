@@ -1,9 +1,0 @@
-my:
-  application:
-    logfileName: myapp1-application-default
----
-spring:
-  profiles: test
-my:
-  application:
-    logfileName: myapp1-application-test
