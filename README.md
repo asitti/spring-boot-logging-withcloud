@@ -33,3 +33,4 @@ When adding the cloud dependency, the custom properties for logback-spring need 
 their associated profiles).  From that point, the logging is only initialized once with the correct property.  See 
 https://github.com/spring-cloud/spring-cloud-commons/issues/107 for more info.
 
+
